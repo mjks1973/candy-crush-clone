@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#ff9cc8"/>
+      <stop offset=".55" stop-color="#ff5fa2"/>
+      <stop offset="1" stop-color="#d4115f"/>
+    </radialGradient>
+    <radialGradient id="ball" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".7" stop-color="#fff2f8"/>
+      <stop offset="1" stop-color="#ffc4dd"/>
+    </radialGradient>
+    <radialGradient id="shade" cx="35%" cy="30%" r="80%">
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#7a0a3e" stop-opacity=".35"/>
+    </radialGradient>
+    <linearGradient id="wrap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe680"/>
+      <stop offset="1" stop-color="#ffb400"/>
+    </linearGradient>
+    <clipPath id="ballClip"><circle r="232"/></clipPath>
+    <path id="arm" d="M0 0 Q150 -110 232 0 A232 232 0 0 1 200.9 116 Q70 40 0 0 Z"/>
+    <g id="end">
+      <path d="M200 0 L392 -150 Q420 -142 410 -110 Q380 -40 404 0 Q380 40 410 110 Q420 142 392 150 Z" fill="url(#wrap)" stroke="#c97a00" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M252 -38 L366 -110 M262 0 L382 0 M252 38 L366 110" stroke="#e39a00" stroke-width="10" stroke-linecap="round" fill="none" opacity=".8"/>
+    </g>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g stroke-width="26" stroke-linecap="round" fill="none">
+    <path d="M140 170l46 24" stroke="#fff"/><path d="M842 150l-30 40" stroke="#ffd23f"/>
+    <path d="M880 760l44 16" stroke="#3fe0b0"/><path d="M118 790l-24 42" stroke="#ffd23f"/>
+    <path d="M196 520l-10 46" stroke="#2e8bff"/><path d="M846 470l34 30" stroke="#fff"/>
+    <path d="M470 110l46 8" stroke="#3fe0b0"/><path d="M560 918l-42 18" stroke="#fff"/>
+    <path d="M300 880l40 20" stroke="#a55bff"/><path d="M748 896l30 -34" stroke="#2e8bff"/>
+  </g>
+  <g transform="translate(512 528) rotate(-24)">
+    <ellipse cx="18" cy="56" rx="330" ry="200" fill="#7a0a3e" opacity=".16"/>
+    <use href="#end" xlink:href="#end"/>
+    <use href="#end" xlink:href="#end" transform="scale(-1 1)"/>
+    <circle r="246" fill="#fff" opacity=".55"/>
+    <circle r="232" fill="url(#ball)" stroke="#b30c55" stroke-width="12"/>
+    <g clip-path="url(#ballClip)" fill="#ff2f86">
+      <use href="#arm" xlink:href="#arm"/>
+      <use href="#arm" xlink:href="#arm" transform="rotate(60)"/>
+      <use href="#arm" xlink:href="#arm" transform="rotate(120)"/>
+      <use href="#arm" xlink:href="#arm" transform="rotate(180)"/>
+      <use href="#arm" xlink:href="#arm" transform="rotate(240)"/>
+      <use href="#arm" xlink:href="#arm" transform="rotate(300)"/>
+      <circle r="232" fill="url(#shade)"/>
+    </g>
+    <circle r="232" fill="none" stroke="#b30c55" stroke-width="12"/>
+    <ellipse cx="-92" cy="-120" rx="96" ry="44" transform="rotate(-30 -92 -120)" fill="#fff" opacity=".75"/>
+  </g>
+  <path d="M236 236l14 34 36 4-28 22 8 36-30-20-30 20 8-36-28-22 36-4z" fill="#fff" opacity=".9"/>
+  <path d="M806 640l8 20 20 3-15 12 4 20-17-11-17 11 4-20-15-12 20-3z" fill="#fff" opacity=".8"/>
+</svg>

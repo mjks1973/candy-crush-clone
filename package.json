@@ -1,0 +1,11 @@
+{
+  "name": "candy-pop-party",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Candy Pop Party: a match-3 candy puzzle game, installable as a PWA.",
+  "scripts": {
+    "dev": "python3 -m http.server 5173 --directory public",
+    "simulate": "node scripts/simulate.js",
+    "icons": "python3 scripts/render-icons.py"
+  }
+}

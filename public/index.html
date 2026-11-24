@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Candy Pop Party</title>
+<meta name="description" content="A sweet match-3 puzzle game for kids and families. Swap candies, make specials and clear 15 levels.">
+<meta name="theme-color" content="#ff6fa9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2f0c2e" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Candy Pop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script src="/js/engine.js" defer></script>
+<script src="/js/levels.js" defer></script>
+<script src="/js/game.js" defer></script>
+</head>
+<body>
+<section id="map" class="screen">
+  <header class="maphead">
+    <h1>Candy Pop Party</h1>
+    <div class="candyrow" id="candyrow"></div>
+    <div class="total" id="total"></div>
+    <div class="installbar">
+      <button class="installbtn" id="install" hidden><svg class="i" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Install the app</button>
+      <p class="ioshint" id="iosHint" hidden>To install on iPhone or iPad, tap <svg class="i" viewBox="0 0 24 24" aria-label="Share"><path d="M12 15V3M8 7l4-4 4 4M6 11H5v10h14V11h-1"/></svg> <b>Share</b>, then <b>Add to Home Screen</b>.<button id="iosClose" aria-label="Hide this tip">&times;</button></p>
+    </div>
+  </header>
+  <div id="road"></div>
+  <div class="mapfoot"><button class="linkbtn" id="reset">Reset progress</button></div>
+</section>
+
+<section id="game" class="screen" hidden>
+  <div class="hud">
+    <button class="iconbtn" id="back" aria-label="Back to the level map"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="lvl">Level <span id="lvlNum">1</span></div>
+    <div class="moves" id="movesBox"><b id="moves">0</b><span>moves</span></div>
+  </div>
+  <div class="goals" id="goals"></div>
+  <div class="meter"><div class="bar" id="bar"><div class="fill" id="fill"></div></div><div class="score" id="score">0</div></div>
+  <div class="boardwrap" id="boardwrap"><canvas id="cv" aria-label="Candy board"></canvas></div>
+  <div class="boost">
+    <button class="bbtn" id="bHammer" aria-pressed="false" aria-label="Hammer: smash one candy or block"><svg class="i" viewBox="0 0 24 24"><path d="M12.5 3.5l8 8-3 3-8-8z" fill="currentColor"/><path d="M11.5 10.5L4 18a2.1 2.1 0 003 3l7.5-7.5"/></svg><span class="n" id="nHammer">3</span></button>
+    <button class="bbtn" id="bShuffle" aria-label="Shuffle the candies"><svg class="i" viewBox="0 0 24 24"><path d="M3 7h4c4 0 6 10 10 10h4M3 17h4c1.6 0 2.8-1.6 3.8-3.4M13.2 9.4C14.2 7.6 15.4 7 17 7h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg><span class="n" id="nShuffle">2</span></button>
+    <p class="boosthint" id="boosthint"></p>
+  </div>
+</section>
+
+<div class="modal" id="modal" hidden><div class="card" id="card" role="dialog" aria-modal="true"></div></div>
+</body>
+</html>
